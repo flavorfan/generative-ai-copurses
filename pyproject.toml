@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "generative-ai-courses"
+version = "0.1.0"
+description = ""
+authors = ["flavorfan <fanck_1979@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.3"
+torch = "1.13.1"
+torchdata = "0.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
