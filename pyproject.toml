@@ -7,9 +7,6 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-torch = "^2.5.1"
-torchvision = "^0.20.1"
-torchaudio = "^2.5.1"
 torchdata = "^0.9.0"
 transformers = "^4.46.1"
 datasets = "^3.0.2"
@@ -19,11 +16,21 @@ rouge-score = "^0.1.2"
 loralib = "^0.1.2"
 peft = "^0.13.2"
 awscli = "^1.35.18"
+trl = "^0.12.0"
+torch = {version = "^2.5.1+cu124", source = "pytorch-gpu"}
+torchvision = {version = "^0.20.1+cu124", source = "pytorch-gpu"}
+torchaudio = {version = "^2.5.1+cu124", source = "pytorch-gpu"}
 
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.3.0"
 nodejs = "^0.1.1"
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]
